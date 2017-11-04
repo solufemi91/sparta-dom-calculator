@@ -2,8 +2,7 @@
 // create listners for the number and operators
 var firstNumber = 0
 var secondNumber = 0
-
-
+var answer = 0
 
 function createNumberAndOperatorListeners(){
   var screen = document.getElementById('screen')
@@ -22,6 +21,8 @@ function createNumberAndOperatorListeners(){
       firstNumber = this.innerHTML
     } else if (numberOfTimesClicked == 2) {
       secondNumber = this.innerHTML
+      var answer = multiply(firstNumber,secondNumber)
+      console.log(answer)
     }
 
 
@@ -35,10 +36,14 @@ function createNumberAndOperatorListeners(){
   }
 }
 
+function multiply(firstNumber,secondNumber){
+   answer = firstNumber * secondNumber
+
+  return answer
+
+}
+
 createNumberAndOperatorListeners()
 
 
-
-function c(){
-  // i want code that will count how many times a button from the nunber button class is clicked
-}
+// this function should only be called once a click has been made
