@@ -4,13 +4,14 @@ var firstNumber = 0
 var secondNumber = 0
 var answer = 0
 var operatorChosen = 0
+var numberOfTimesClicked = 0
+
 
 function createNumberListeners(){
   var screen = document.getElementById('screen')
   var numberButtons = document.getElementsByClassName("buttonNum")
 
   for(i = 0; i < numberButtons.length; i++){
-    var numberOfTimesClicked = 0
     numberButtons[i].addEventListener("click",function(){
     screen.innerHTML = this.innerHTML
     numberOfTimesClicked++
@@ -86,6 +87,11 @@ function clearButtonListener(){
   var buttonClear = document.getElementById('buttonClear')
   buttonClear.addEventListener("click",function(){
   screen.innerHTML = "Sparta Calculator"
+   firstNumber = 0
+   secondNumber = 0
+   answer = 0
+   operatorChosen = 0
+   numberOfTimesClicked = 0
   })
 }
 
