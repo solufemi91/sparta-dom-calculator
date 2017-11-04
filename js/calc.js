@@ -37,8 +37,8 @@ function createNumberAndOperatorListeners(){
 
 createNumberAndOperatorListeners()
 
-// record the first and second click from number class
 
-function recordFirstAndSecondClick(){
+
+function c(){
   // i want code that will count how many times a button from the nunber button class is clicked
 }
