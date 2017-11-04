@@ -81,8 +81,12 @@ function division(firstNumber,secondNumber){
   return answer
 }
 
-function clearButtonListner(){
-  
+function clearButtonListener(){
+  var screen = document.getElementById('screen')
+  var buttonClear = document.getElementById('buttonClear')
+  buttonClear.addEventListener("click",function(){
+  screen.innerHTML = "Sparta Calculator"
+  })
 }
 
 
@@ -90,3 +94,4 @@ function clearButtonListner(){
 createNumberListeners()
 createOperatorListeners()
 createEqualsSignListener()
+clearButtonListener()
