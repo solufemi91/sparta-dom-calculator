@@ -46,7 +46,10 @@ function createEqualsSignListener(){
     if(operatorChosen == "*"){
     answer = multiply(firstNumber, secondNumber)
     screen.innerHTML = answer
-    }
+  } else if(operatorChosen == "/"){
+    answer = division(firstNumber,secondNumber)
+    screen.innerHTML = answer
+  }
   })
 }
 
@@ -72,11 +75,7 @@ function division(firstNumber,secondNumber){
   return answer
 }
 
-function getAnswer(){
-  if (operatorChosen == "*"){
-    multiply(firstNumber,secondNumber)
-  }
-}
+
 
 createNumberListeners()
 createOperatorListeners()
