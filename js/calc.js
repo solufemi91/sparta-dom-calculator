@@ -1,6 +1,7 @@
 
 // create listners for the number and operators
-
+var firstNumber = 0
+var secondNumber = 0
 
 
 
@@ -12,9 +13,17 @@ function createNumberAndOperatorListeners(){
   var operatorButtons = document.getElementsByClassName("operator")
 
   for(i = 0; i < numberButtons.length; i++){
+    var numberOfTimesClicked = 0
     numberButtons[i].addEventListener("click",function(){
 
     screen.innerHTML = this.innerHTML
+    numberOfTimesClicked++
+    if (numberOfTimesClicked == 1){
+      firstNumber = this.innerHTML
+    } else if (numberOfTimesClicked == 2) {
+      secondNumber = this.innerHTML
+    }
+
 
   })}
 
