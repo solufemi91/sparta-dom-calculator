@@ -1,8 +1,9 @@
 
 // create listners for the number and operators
 var firstNumber = 0
-var secondNumber = 2
+var secondNumber = 0
 var answer = 0
+var operatorChosen = 0
 
 function createNumberListeners(){
   var screen = document.getElementById('screen')
@@ -30,35 +31,29 @@ function createOperatorListeners(){
   for(i = 0; i < operatorButtons.length; i++){
     operatorButtons[i].addEventListener("click",function(){
       screen.innerHTML = this.innerHTML
-      if (screen.innerHTML == '*'){
-        var test1 = multiply(firstNumber, secondNumber)
-        console.log(test1)
-      }
-      else if (screen.innerHTML == '+') {
-        var test2 = add(firstNumber,secondNumber)
-        console.log(test2)
-
-
-      } else if(screen.innerHTML == '-') {
-        var test3 = subtraction(firstNumber,secondNumber)
-        console.log(test3)
-      } else if (screen.innerHTML == '/'){
-        var test4 = division(firstNumber, secondNumber)
-        console.log(test4)
-
-      }
-
+      operatorChosen = this.innerHTML
 
     })
 
   }
 }
 
+function createEqualsSignListener(){
+  var screen = document.getElementById('screen')
+  var equals = document.getElementById('equals')
+  equals.addEventListener("click",function(){
+    screen.innerHTML =this.innerHTML
+    if(operatorChosen == "*"){
+    answer = multiply(firstNumber, secondNumber)
+    screen.innerHTML = answer
+    }
+  })
+}
 
 function multiply(firstNumber,secondNumber){
-   answer = firstNumber * secondNumber
 
-  return answer
+   answer = firstNumber * secondNumber
+   return answer
 
 }
 
@@ -77,8 +72,12 @@ function division(firstNumber,secondNumber){
   return answer
 }
 
+function getAnswer(){
+  if (operatorChosen == "*"){
+    multiply(firstNumber,secondNumber)
+  }
+}
+
 createNumberListeners()
 createOperatorListeners()
-
-
-// try and include the multiplication button
+createEqualsSignListener()

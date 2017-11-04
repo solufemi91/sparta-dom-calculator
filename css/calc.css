@@ -8,7 +8,7 @@
 }
 
 h2 {
-	
+
 	font-family: Courier;
 	text-align: right;
 
@@ -29,7 +29,7 @@ h2 {
 	background-color: #FFA500;
 }
 
-.equals {
+#equals {
 	width: 135px;
 	height: 60px;
 	font-size: 30px;
