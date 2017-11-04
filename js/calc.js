@@ -49,6 +49,12 @@ function createEqualsSignListener(){
   } else if(operatorChosen == "/"){
     answer = division(firstNumber,secondNumber)
     screen.innerHTML = answer
+  } else if(operatorChosen == "+"){
+    answer = add(firstNumber,secondNumber)
+    screen.innerHTML = answer
+  } else{
+    answer = subtraction(firstNumber,secondNumber)
+    screen.innerHTML = answer
   }
   })
 }
@@ -73,6 +79,10 @@ function subtraction(firstNumber,secondNumber){
 function division(firstNumber,secondNumber){
   answer = firstNumber / secondNumber
   return answer
+}
+
+function clearButtonListner(){
+  
 }
 
 

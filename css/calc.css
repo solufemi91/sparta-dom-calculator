@@ -36,7 +36,7 @@ h2 {
 	font-family: Courier;
 
 }
-.buttonClear {
+#buttonClear {
 	width: 60px;
 	height: 60px;
 	font-size: 30px;
