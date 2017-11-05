@@ -4,6 +4,7 @@ var firstNumber = 0
 var secondNumber = 0
 var answer = 0
 var operatorChosen = 0
+var operatorClicked = 0
 var numberOfTimesClicked = 0
 
 
@@ -13,12 +14,15 @@ function createNumberListeners(){
 
   for(i = 0; i < numberButtons.length; i++){
     numberButtons[i].addEventListener("click",function(){
-    screen.innerHTML = this.innerHTML
+    // screen.innerHTML = this.innerHTML
     numberOfTimesClicked++
     if (numberOfTimesClicked == 1){
+      screen.innerHTML = this.innerHTML
       firstNumber = this.innerHTML
-    } else if (numberOfTimesClicked == 2) {
+    } else if (operatorClicked > 0) {
+      screen.innerHTML = this.innerHTML
       secondNumber = this.innerHTML
+
     }
 
   })}
@@ -33,6 +37,7 @@ function createOperatorListeners(){
     operatorButtons[i].addEventListener("click",function(){
       screen.innerHTML = this.innerHTML
       operatorChosen = this.innerHTML
+      operatorClicked++
 
     })
 
@@ -92,6 +97,7 @@ function clearButtonListener(){
    answer = 0
    operatorChosen = 0
    numberOfTimesClicked = 0
+   operatorClicked = 0
   })
 }
 
