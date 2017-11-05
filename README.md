@@ -9,3 +9,15 @@
 5) The calculator should display the correct value for each button pressed in the browser
 6) when the equals button is pressed you should display the result of the last entered calculation
 7) the program should use functions, loops, DOM selectors and DOM events
+
+## What I managed to deliver
+
+I managed to deliver 7/7
+
+## Things that went well
+
+Everything went well. I found the logic of the project pretty simple to grasp
+
+## Things I struggled with
+
+The only thing I stuggled with was ensuring that after the user clicked the first number, any subsequent that was clicked before an operator was not displayed on the calculator screen.
